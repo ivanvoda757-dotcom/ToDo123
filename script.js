@@ -13,6 +13,9 @@ function saveTasks() {
 }
 
 function renderTasks() {
+    // Čuva scroll poziciju
+    const scrollPosition = window.scrollY || document.documentElement.scrollTop;
+    
     const list = document.getElementById('task-list');
     list.innerHTML = '';
     const completed = tasks.filter(t => t.done).length;
@@ -43,6 +46,9 @@ function renderTasks() {
         `;
         list.appendChild(li);
     });
+    
+    // Vraća scroll na prethodnu poziciju
+    window.scrollTo(0, scrollPosition);
 }
 
 function addTask(event) {
@@ -58,12 +64,14 @@ function addTask(event) {
 }
 
 function toggleTask(index) {
+    event.preventDefault();
     tasks[index].done = !tasks[index].done;
     saveTasks();
     renderTasks();
 }
 
 function deleteTask(index) {
+    event.preventDefault();
     tasks.splice(index, 1);
     saveTasks();
     renderTasks();
