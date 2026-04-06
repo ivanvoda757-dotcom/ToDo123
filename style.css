@@ -1,0 +1,202 @@
+body {
+  font-family: 'Courier New', monospace; /* kao notes */
+  background-color: #fefefe; /* svetlo bela */
+  padding: 20px;
+}
+
+h1 {
+  color: #333;
+  border-bottom: 2px solid #007BFF;
+  padding-bottom: 5px;
+}
+
+form {
+  margin-bottom: 20px;
+}
+
+input[type="text"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 250px;
+  font-size: 16px;
+}
+
+button {
+  padding: 10px 15px;
+  background: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s;
+}
+
+.task-row .edit-button {
+  margin-left: 8px;
+  margin-right: 10px;
+  flex-shrink: 0;
+}
+
+.task-main {
+  flex: 1;
+  margin-left: 0;
+}
+
+.task-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.task-main {
+  flex: 1;
+  margin-left: 10px;
+}
+
+.task-text {
+  font-weight: bold;
+}
+
+.task-description {
+  margin-top: 6px;
+  color: #555;
+  font-size: 0.95em;
+  line-height: 1.4;
+  white-space: pre-wrap;
+}
+
+.edit-button,
+.cancel-button {
+  padding: 6px 10px;
+  background: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.3s;
+}
+
+.cancel-button {
+  background: #6c757d;
+}
+
+.edit-button:hover,
+.cancel-button:hover,
+button:hover {
+  background: #0056b3;
+}
+
+.delete-button {
+  padding: 6px 10px;
+  background: #dc3545;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: background 0.3s;
+  margin-left: 10px;
+}
+
+.delete-button:hover {
+  background: #c82333;
+}
+
+.edit-form {
+  margin-top: 10px;
+  margin-left: 30px;
+}
+
+.edit-form input[type="text"],
+.edit-form textarea {
+  width: 400px;
+  max-width: 90%;
+  margin-top: 8px;
+  display: block;
+  white-space: pre-wrap;
+  resize: vertical;
+}
+
+.edit-form button[type="submit"] {
+  margin-top: 8px;
+}
+
+.edit-form button[type="button"] {
+  margin-top: 8px;
+  margin-left: 8px;
+}
+
+.edit-form input:disabled,
+.edit-form textarea:disabled {
+  background: #f0f0f0;
+  cursor: not-allowed;
+}
+
+button:hover {
+  background: #0056b3;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  background: #fff8dc; /* svetlo zuta kao papir */
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+li {
+  background: transparent;
+  margin: 10px 0;
+  padding: 10px;
+  border-bottom: 1px dotted #ccc; /* linije kao u notesu */
+  position: relative;
+}
+
+li:last-child {
+  border-bottom: none;
+}
+
+li:hover {
+  background: rgba(255, 248, 220, 0.5);
+}
+
+li a.done {
+  color: #28a745; /* zelen za check */
+  text-decoration: none;
+  font-weight: bold;
+  margin-right: 10px;
+  transition: color 0.3s;
+}
+
+li a.not-done {
+  color: #dc3545; /* crven za krstic */
+  text-decoration: none;
+  font-weight: bold;
+  margin-right: 10px;
+  transition: color 0.3s;
+}
+
+li a:hover {
+  opacity: 0.7;
+}
+
+.progress {
+  width: 100%;
+  background: #ddd;
+  height: 20px;
+  border-radius: 10px;
+  margin: 10px 0;
+  overflow: hidden;
+}
+
+.bar {
+  height: 100%;
+  background: #28a745;
+  border-radius: 10px;
+  transition: width 0.3s;
+}
